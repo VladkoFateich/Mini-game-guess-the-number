@@ -6,14 +6,15 @@ start.addEventListener('click', function () {
   start.style.cssText = 'display:none';
 
   const responseField = document.createElement('input');
+
   //   responseField.id = 'responseField';
   const response = document.createElement('div');
-  //   response.id = 'response';
+  response.id = 'response';
   wrapper.append(responseField);
   wrapper.append(response);
 
-  let num = Math.floor(Math.random() * 100 + 1);
-
+  // let num = Math.floor(Math.random() * 100 + 1);
+  let num = 5;
   responseField.addEventListener('blur', function (e) {
     count++;
     console.log(count);
@@ -28,6 +29,7 @@ start.addEventListener('click', function () {
       response.textContent = `Верно загаданное число ${e.target.value} отгадано с ${count} попытки`;
       responseField.style.display = 'none';
       start.style.display = 'block';
+      count = 0;
     }
   });
 });
