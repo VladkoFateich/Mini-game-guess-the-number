@@ -6,6 +6,7 @@ start.addEventListener('click', function () {
   start.style.cssText = 'display:none';
 
   const responseField = document.createElement('input');
+  responseField.type = 'number'
 
   //   responseField.id = 'responseField';
   const response = document.createElement('div');
@@ -13,8 +14,8 @@ start.addEventListener('click', function () {
   wrapper.append(responseField);
   wrapper.append(response);
 
-  // let num = Math.floor(Math.random() * 100 + 1);
-  let num = 5;
+  let num = Math.floor(Math.random() * 100 + 1);
+  // let num = 5;
   responseField.addEventListener('blur', function (e) {
     count++;
     console.log(count);
